@@ -1,11 +1,26 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-	actions{
-		addTask: function () {
+	actions:{
+		addTask: function() {
 			var title = this.get('title');
-			var descripton = this.get('descripton');
+			var description = this.get('description');
 			var date = this.get('date');
+
+			var newTask = this.store.createRecord('task',{
+				title: title,
+				description: description,
+				date: new Date(date)
+			});
+
+			newTask.save();
+
+			//clear form
+			this.setProperties({
+				title:'',
+				description:'',
+				date:''
+			});
 		}
 	}
 });

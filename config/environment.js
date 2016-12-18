@@ -4,6 +4,13 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'task',
     environment: environment,
+ contentSecurityPolicy: {
+    'script-src': "'self' 'unsafe-eval' apis.google.com",
+    'frame-src': "'self' https://*.firebaseapp.com",
+    'connect-src': "'self' wss://*.firebaseio.com https://*.googleapis.com"
+  },
+    firebase: 'https://emberjs-53036.firebaseio.com/',
+    firebase: {databaseURL: 'https://emberjs-53036.firebaseio.com/',authDomain: 'emberjs-53036.firebaseapp.com'},
     rootURL: '/',
     locationType: 'auto',
     EmberENV: {

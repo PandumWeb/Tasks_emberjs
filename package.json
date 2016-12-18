@@ -15,6 +15,7 @@
     "test": "ember test"
   },
   "devDependencies": {
+    "active-model-adapter": "2.1.1",
     "broccoli-asset-rev": "^2.4.5",
     "ember-ajax": "^2.4.1",
     "ember-cli": "2.10.0",
@@ -35,7 +36,10 @@
     "ember-load-initializers": "^0.5.1",
     "ember-resolver": "^2.0.3",
     "ember-welcome-page": "^1.0.3",
-    "loader.js": "^4.0.10"
+    "emberfire": "2.0.5",
+    "firebase": "3.6.4",
+    "loader.js": "^4.0.10",
+    "moment": "2.17.1"
   },
   "engines": {
     "node": ">= 0.12.0"
